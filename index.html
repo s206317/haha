@@ -185,15 +185,13 @@
         });
         document.getElementById(pageId).style.display = 'block';
       }
-
       function triggerVibration() {
         if ('vibrate' in navigator) {
-          navigator.vibrate([100, 100,100, 100, 100, 100, 100, 100,]);
+          navigator.vibrate([100, 50, 100, 50, 100, 50, 100]);
         } else {
           console.log('Vibration API not supported on this device.');
         }
       }
-
       window.onload = function () {
         showPage('home');
       };
