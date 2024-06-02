@@ -42,7 +42,7 @@
               <img
                 src="haha.png"
                 alt="haha"
-                class="responsive-img shake-on-hover"
+                class="responsive-img rotate-on-hover"
                 onclick="triggerVibration()"
               />
             </a>
@@ -53,7 +53,7 @@
               <img
                 src="zzz.png"
                 alt="zzz"
-                class="responsive-img shake-on-hover"
+                class="responsive-img bounce-on-hover"
                 onclick="triggerVibration()"
               />
             </a>
@@ -66,7 +66,7 @@
               <img
                 src="bra.png"
                 alt="bra"
-                class="responsive-img shake-on-hover"
+                class="responsive-img pulse-on-hover"
                 onclick="triggerVibration()"
               />
             </a>
@@ -181,13 +181,17 @@
         });
         document.getElementById(pageId).style.display = 'block';
       }
+
       function triggerVibration() {
         if ('vibrate' in navigator) {
-          navigator.vibrate([100, 50, 100, 50, 100, 50, 100]);
+          navigator.vibrate([
+          500, 500, 500, 500, 500, 500, 500, 500, 500, 500
+          ]);
         } else {
           console.log('Vibration API not supported on this device.');
         }
       }
+
       window.onload = function () {
         showPage('home');
       };
